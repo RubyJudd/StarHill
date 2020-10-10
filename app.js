@@ -21,8 +21,8 @@ const indexRoutes = require("./routes/index");
 
 
 
-
-mongoose.connect('mongodb://localhost:27017/yelp_camp_v2', {
+// mongoose.connect('mongodb://localhost:27017/yelp_camp_v2', {
+mongoose.connect('Ruby:Foocat#01>@cluster0.b8u7z.mongodb.net/<dbname>?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
