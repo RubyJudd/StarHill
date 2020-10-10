@@ -22,7 +22,7 @@ const indexRoutes = require("./routes/index");
 
 
 // mongoose.connect('mongodb://localhost:27017/yelp_camp_v2', {
-mongoose.connect('mongodb+srv://Ruby:Foocat#01@cluster0.b8u7z.mongodb.net/yelp_camp_v2?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Ruby:silas@cluster0.b8u7z.mongodb.net/yelp_camp_v2?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
