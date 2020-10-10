@@ -79,6 +79,11 @@ app.use("/campgrounds", campgroundRoutes);
 
 // this will append /campgrounds in front of all our campgroundRoutes. This groups routes into topics and allows you to write shorter route declarations
 
-app.listen(3000, function(){
-    console.log("Listening on PORT: 3000");
-});  
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Server Has Started!");
+});
+
+// app.listen(3000, function(){
+//     console.log("Listening on PORT: 3000");
+// });  
