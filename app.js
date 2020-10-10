@@ -22,7 +22,7 @@ const indexRoutes = require("./routes/index");
 
 
 // mongoose.connect('mongodb://localhost:27017/yelp_camp_v2', {
-mongoose.connect('Ruby:Foocat#01>@cluster0.b8u7z.mongodb.net/yelp_camp_v2?retryWrites=true&w=majority', {
+mongoose.connect('Ruby:Foocat#01@cluster0.b8u7z.mongodb.net/yelp_camp_v2?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -79,11 +79,11 @@ app.use("/campgrounds", campgroundRoutes);
 
 // this will append /campgrounds in front of all our campgroundRoutes. This groups routes into topics and allows you to write shorter route declarations
 
-// var port = process.env.PORT || 3000;
-// app.listen(port, function () {
-//   console.log("Server Has Started!");
-// });
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Server Has Started!");
+});
 
-app.listen(3000, function(){
-    console.log("Listening on PORT: 3000");
-});  
+// app.listen(3000, function(){
+//     console.log("Listening on PORT: 3000");
+// });  
