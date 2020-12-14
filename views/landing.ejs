@@ -1,42 +1,63 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>YelpCamp</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/stylesheets/landing.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
-<!-- Modernizer make page cross brower compatable 		 -->
+<%- include("partials/header") %>
+
+	
+	<div style="height:4rem; width:100%">
+	</div>
+	
+<div class="container">
+	
+	<div class="row justify-content-center m-md-5">
+		<div class="col-12 col-md-8">  
+	       <img src="/images/Landing/logo.svg" id="logo" class="img-fluid card-img-top">
+		</div> 
+		<div class="col-12">
+		       <h3 class="text-center">Tracing, guidance and mediation for Post-Adoption                   Reunions</h3> 
+		 </div>
+	 </div>
+	 
+	
+	<div class="card-columns">
 		
-    </head>
-    <body>
-    	
+		<div class="card p-2 p-md-5">
+		  <img src="/images/Landing/adoptiveParents.jpg" class="card-img-top img-fluid px-md-5" alt="...">
+		  <div class="card-body px-md-5 mx-md-5">
+			<a href="/adoptiveparents#contactBirthParents"><h2 class="card-title">Should contact with my <span>adoptive child’s</span> birth parents take place?</h2></a>
+			  <a href="/adoptiveparents#facingRejection"><p class="main card-text">What if the process causes unnecessary pain and rejection?</p></a>
+			  <a href="/adoptiveparents#trueParenting"><p class="main card-text">What if I lose my child and they no longer see me as their true parent? </p></a>
+		  </div>
+		</div>
 		
-    <div class="container">
-<!--Coditionals for error/success messages  -->
-        <% if(error && error.length > 0){ %>
-            <div class="alert alert-danger" role="alert">
-                <%= error %>
-            </div>
-        <% } %>
-        <% if(success && success.length > 0){ %>
-            <div class="alert alert-success" role="alert">
-                <%= success %>
-            </div>
-        <% } %>
-    </div>
-    
-    <div id="landing-header">
- 		<h1>Welcome to YelpCamp!</h1>
-		<a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
-    </div>
-    
-    <ul class="slideshow">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+		<div class="card p-2 p-md-5">
+		  <img src="/images/Landing/house.jpg" class="card-img-top img-fluid px-md-5" alt="...">
+		  <div class="card-body px-md-5 mx-md-5">
+			<a href="/birthparents#contactAdoptedChild"><h2 class="card-title">Should I seek contact with the <span>child</span> I      placed in adoption                     ?              </h2></a>
+			  <a href='/birthparents#talkToYourAdoptedChild'><p class="main card-text">What should I say to the child I placed in adoption?</p></a>
+			  <a href='/birthparents#grievingLoss'><p class="main card-text">How do I grieve the loss of my child as an natural parent?</p></a>
+			   <a href='/birthparents#findingLostRelatives'><p class="main card-text">How do I find the child I placed in adoption?</p></a>
+		  </div>
+		</div>
+		
+		<div class="card p-2 p-md-5">
+		  <img src="/images/Landing/adoptee.jpg" class="card-img-top px-md-5" alt="...">
+		  <div class="card-body px-md-5 mx-md-5">
+			  <a href="/adoptees#contactBirthParents"><h2 class="card-title">Should I seek <span>contact</span> with my birth mother  or father?</h2></a>
+			  <a href="/adoptees#respond"><p class="main card-text">How do I respond to contact from a birth relative?</p></a>
+				  <a href="/adoptees#contactBirthParents"><p class="main card-text">How do I find my biological parents or relatives?</p></a>
+				   <a href="/adoptees#reunionEtiquette"><p class="main card-text">I found my birth mother, now what?</p></a>
+				   <a href="/adoptees#processAdoptionTrauma"><p class="main card-text">How to process attachment / abandonment trauma as an adoptee </p></a>
+		  </div>
+		</div>
+		
+		
+		<div class="card p-2 p-md-5">
+		  <img src="/images/Landing/child.jpg" class="card-img-top img-fluid px-md-5" alt="...">
+		  <div class="card-body px-md-5 mx-md-5">
+			<a href='/arttherapy'><h2 class="card-title">Play Therapy and <span>Arts Therapy</span> for Adopted Children</h2></a>
+			<a href='/arttherapy'><p class="main card-text">What is Art Therapy?</p></a>
+		  </div>
+		</div>
+		
+</div>
 
 <%- include("partials/footer") %>
 

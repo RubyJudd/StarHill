@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Yelp Camp</title>
-	<link rel="stylesheet" href="	 https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
-">
+	<title>Adoption Reunions</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	
+
+	<script src="https://kit.fontawesome.com/f034ca5c2d.js" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+
 	<link rel="stylesheet" href="/stylesheets/main.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name="description" content="I am an accredited adoption Social Worker based in Hillcrest KZN whose focus is on origin tracing. I offer various post-adoption support services, including: trauma counselling for birth parents and children/adults affected by the adoption process, tracing of missing family members and acting as an intermediary to facilitate contact.">
+
 
 </head>
-<body>
-	<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">YelpCamp</a>
-		</div>
-		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<% if(!currentUser){ %>
-				  <li><a href="/login">Login</a></li>
-				  <li><a href="/register">Sign Up</a></li>
-				<% } else { %>
-				<li><a href="#">Signed in as <%= currentUser.username %></a></li>
-				 <li><a href="/logout">Logout</a></li>
-				<% } %>
-			</ul>
-		</div>
-	</div>
-</nav>
+<body>	
+	<header>
+		
+		<nav class="navbar fixed-top navbar-expand-xl navbar-dark bg-dark d-flex">
+	   <a class="homeButton nav-item active px-xl-5" href="/">Home</a>
 
-	<div class="container">
-		<% if (error && error.length > 0){ %>
-			<div class="alert alert-danger" role="alert">
-				<%= error %>
-			</div>
-		 <% } %>
-		<% if (success && success.length > 0){ %>
-			<div class="alert alert-success" role="alert">
-				<%= success %>
-			</div>
-		 <% } %>
-	</div>
-	
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
 
-<!--  user object taken from the route (use req.user to get the information) and passed as the variable currentUser	 -->
-<!-- If the user variable is undefined as no user (exclamation mark), show login and sign up	 -->
-<!-- else header should only show logout	 -->
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  	 <ul class="navbar-nav">
+		      <li class="nav-item active px-xl-5">
+		        <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+		      </li>
+		       <li class="nav-item active px-xl-5">
+		        <a class="nav-link" href="/contact">Contact <span class="sr-only">(current)</span></a>
+		      </li>
+		       <li class="nav-item active px-xl-5">
+		        <a class="nav-link" href="/arttherapy">Therapeutic Arts<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item active px-xl-5">
+		        <a class="nav-link" href="/storytelling">Adoption Story Telling Evenings<span class="sr-only">(current)</span></a>
+		      </li>
+
+
+		     <li class="nav-item dropdown px-xl-5">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		         Post-Adoption Re-union Q&A 
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="/adoptees">Resources for Adoptees</a>
+		          <a class="dropdown-item" href="/birthparents">Resources for Birth Parents</a>
+		          <a class="dropdown-item" href="/adoptiveparents">Resources for Adoptive Parents</a>
+		     </li>
+	     </ul>
+    </div>
+</nav> 
 	
+	 
+		
+	</header>
+
+
 	
 	
